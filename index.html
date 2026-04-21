@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Константин Прозоров | Operations • Supply Chain • Projects</title>
+    <style>
+        :root {
+            --dark: #0f172a;
+            --accent: #2563eb;
+            --gray: #64748b;
+            --bg: #f8fafc;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -60px auto 60px;
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 12px 24px;
+            border: 2px solid #e2e8f0;
+            background: white;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .tab-btn.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .role-content { display: none; }
+        .role-content.active { display: block; animation: fadeIn 0.5s; }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .metric-card {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .metric-card h3 { margin: 0 0 10px 0; font-size: 1.1rem; color: var(--accent); }
+
+        .experience-item {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 25px 0;
+        }
+
+        .experience-item:last-child { border: none; }
+
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        .tag { background: #e2e8f0; padding: 4px 12px; border-radius: 15px; font-size: 0.85rem; }
+
+        .contacts {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px dashed #e2e8f0;
+        }
+
+        .btn-main {
+            background: var(--accent);
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        @media (max-width: 600px) {
+            .container { margin: 0; border-radius: 0; padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Константин Прозоров</h1>
+    <p style="font-size: 1.2rem; opacity: 0.8;">Наведение порядка в процессах, закупках и деньгах</p>
+</header>
+
+<div class="container">
+    <div class="tabs">
+        <button class="tab-btn active" onclick="showRole('coo')">Операционный директор</button>
+        <button class="tab-btn" onclick="showRole('procurement')">Директор по закупкам</button>
+        <button class="tab-btn" onclick="showRole('project')">Project / Part-time</button>
+    </div>
+
+    <div id="coo" class="role-content active">
+        <h2>Chief Operating Officer</h2>
+        <p>Более 20 лет опыта превращения хаоса в систему. Фокус на финансовой дисциплине, управлении изменениями и KPI.</p>
+        <div class="metric-grid">
+            <div class="metric-card">
+                <h3>Управляемость</h3>
+                Настройка кросс-функционального взаимодействия и прозрачности функций.
+            </div>
+            <div class="metric-card">
+                <h3>Эффективность</h3>
+                Рост оборота на 48% и снижение кассовых разрывов на 80%.
+            </div>
+        </div>
+    </div>
+
+    <div id="procurement" class="role-content">
+        <h2>Supply Chain Director</h2>
+        <p>Эксперт по международным закупкам (Китай, Индия, ЕС). Управление бюджетами до 600 млн руб./год.</p>
+        <div class="metric-grid">
+            <div class="metric-card">
+                <h3>Cost Saving</h3>
+                Экономический эффект более $4.9 млн за счет оптимизации FOB цен.
+            </div>
+            <div class="metric-card">
+                <h3>Автоматизация</h3>
+                Внедрение нейросетей: сокращение цикла планирования с 2 месяцев до 1 недели.
+            </div>
+        </div>
+    </div>
+
+    <div id="project" class="role-content">
+        <h2>Fractional / Interim Manager</h2>
+        <p>Подключаюсь под конкретную задачу: аудит функции, запуск ВЭД с нуля или антикризисное управление.</p>
+        <div class="metric-grid">
+            <div class="metric-card">
+                <h3>Экспресс-аудит</h3>
+                Быстрое выявление узких мест в логистике и закупках.
+            </div>
+            <div class="metric-card">
+                <h3>Результат</h3>
+                Работа в логике «проект — решение — внедрение».
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Ключевой опыт</h2>
+        
+        <div class="experience-item">
+            <strong>Атмосфера ООО | Директор по закупкам</strong>
+            <div class="tags">
+                <span class="tag">ВЭД (Китай)</span>
+                <span class="tag">Автоматизация</span>
+                <span class="tag">Нейросети</span>
+            </div>
+            <ul>
+                <li>Снизил стоимость закупки ткани в Китае на 10% (эффект 20 млн руб./год).</li>
+                <li>Автоматизировал планирование, сократив трудозатраты на 25%.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <strong>ИП Шодиев О.М. | Директор по продукту (Fashion)</strong>
+            <ul>
+                <li>Снизил кассовый разрыв на 80% за счет настройки ДДС.</li>
+                <li>Сократил излишки запасов с 33% до 14%.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <strong>ООО Никтон | Директор по закупкам и логистике</strong>
+            <ul>
+                <li>Экономический эффект $4.9 млн за 2022 год.</li>
+                <li>Точность снабжения производства повышена до 90%.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contacts">
+        <h2>Связаться со мной</h2>
+        <p>+7 (965) 337-38-83 • konstantin@prozoroff.com</p>
+        <br>
+        <a href="https://t.me/your_username" class="btn-main">Написать в Telegram</a>
+    </div>
+</div>
+
+<script>
+    function showRole(roleId) {
+        // Убираем активный класс у всех кнопок и контента
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.role-content').forEach(cont => cont.classList.remove('active'));
+        
+        // Добавляем активный класс нужным элементам
+        event.currentTarget.classList.add('active');
+        document.getElementById(roleId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
