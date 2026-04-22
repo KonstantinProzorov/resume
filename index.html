@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -16,7 +15,6 @@
         }
         body { font-family: 'Inter', sans-serif; margin: 0; background: var(--bg); color: var(--text); line-height: 1.6; }
         
-        /* Шапка с фото */
         header { padding: 80px 20px 40px; text-align: center; background: linear-gradient(to bottom, #0f172a, #1e293b); }
         .profile-container { margin-bottom: 20px; }
         .profile-img {
@@ -29,7 +27,6 @@
 
         .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
 
-        /* Плашки ролей */
         .roles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 60px; }
         .role-card { 
             background: var(--card-bg); padding: 25px; border-radius: 16px; 
@@ -38,30 +35,27 @@
         .role-card h3 { margin-top: 0; color: var(--accent); font-size: 1.2em; }
         .role-card p { font-size: 0.95em; color: #cbd5e1; margin-bottom: 0; }
 
-        /* Опыт работы (Аккордеон) */
         .section-title { text-align: center; margin-bottom: 30px; font-size: 1.8em; }
-        .exp-item { margin-bottom: 15px; border-radius: 12px; overflow: hidden; background: #1e293b; border: 1px solid #334155; }
+        .exp-item { margin-bottom: 12px; border-radius: 12px; overflow: hidden; background: #1e293b; border: 1px solid #334155; }
         .exp-header { 
-            padding: 20px 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center;
-            transition: 0.3s; font-weight: 600;
+            padding: 18px 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+            transition: 0.3s; font-weight: 600; font-size: 0.95em;
         }
         .exp-header:hover { background: #334155; }
-        .exp-header .company { color: var(--accent); margin-right: 10px; }
+        .exp-header .company { color: var(--accent); margin-right: 8px; }
         .exp-content { display: none; padding: 25px; background: #1e293b; border-top: 1px solid #334155; }
         .exp-content ul { margin: 0; padding-left: 20px; }
-        .exp-content li { margin-bottom: 12px; color: #cbd5e1; }
+        .exp-content li { margin-bottom: 10px; color: #cbd5e1; font-size: 0.95em; }
         
         .arrow { font-size: 0.8em; transition: 0.3s; color: var(--accent); }
         .active .arrow { transform: rotate(180deg); }
 
-        /* Контакты */
-        .contacts { text-align: center; padding: 80px 20px; background: #1e293b; border-radius: 20px; margin-top: 40px; }
+        .contacts { text-align: center; padding: 60px 20px; background: #1e293b; border-radius: 20px; margin-top: 40px; }
         .btn-main { 
             display: inline-block; background: var(--accent); color: var(--dark); 
             padding: 18px 45px; border-radius: 12px; text-decoration: none; 
             font-weight: 700; transition: 0.3s; margin-top: 20px;
         }
-        .btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3); }
     </style>
 </head>
 <body>
@@ -71,7 +65,7 @@
         <img src="photo.jpg" alt="Константин Прозоров" class="profile-img">
     </div>
     <h1>Константин Прозоров</h1>
-    <p class="subtitle">Операционный директор | Эксперт по закупкам и ВЭД (Китай, Индия, ЕАЭС)</p>
+    <p class="subtitle">Операционный директор | Эксперт по закупкам и ВЭД</p>
 </header>
 
 <div class="container">
@@ -90,7 +84,7 @@
         </div>
     </div>
 
-    <h2 class="section-title">Подробный опыт</h2>
+    <h2 class="section-title">Опыт работы</h2>
 
     <div class="experience">
         <div class="exp-item">
@@ -100,9 +94,9 @@
             </div>
             <div class="exp-content">
                 <ul>
-                    <li><strong>Снизил стоимость закупки:</strong> ткани в Китае на 10% (эффект 20 млн руб./год).</li>
-                    <li><strong>Автоматизировал планирование:</strong> сократив трудозатраты отдела на 25%.</li>
-                    <li><strong>Контроль качества:</strong> внедрил систему инспекций на фабриках, снизив брак до 1.5%.</li>
+                    <li>Снизил стоимость закупки ткани в Китае на 10% (эффект 20 млн руб./год).</li>
+                    <li>Автоматизировал планирование закупок, сократив трудозатраты отдела на 25%.</li>
+                    <li>Внедрил систему контроля качества на фабриках в Китае, снизив брак до 1.5%.</li>
                 </ul>
             </div>
         </div>
@@ -114,9 +108,9 @@
             </div>
             <div class="exp-content">
                 <ul>
-                    <li><strong>Финансовое оздоровление:</strong> снизил кассовый разрыв на 80% через настройку ДДС и платежного календаря.</li>
-                    <li><strong>Оптимизация стоков:</strong> сократил излишки запасов на складах с 33% до 14%.</li>
-                    <li><strong>Производство:</strong> перевел 100% заказов на модель OEM с полным циклом контроля.</li>
+                    <li>Снизил кассовый разрыв на 80% за счет настройки ДДС и платежного календаря.</li>
+                    <li>Сократил излишки запасов на складах с 33% до 14% через ABC-анализ.</li>
+                    <li>Перевел 100% производства на модель OEM с полным циклом контроля.</li>
                 </ul>
             </div>
         </div>
@@ -128,18 +122,59 @@
             </div>
             <div class="exp-content">
                 <ul>
-                    <li><strong>Глобальная оптимизация:</strong> эффект $4.9 млн за 2022 год через тендеры и переговоры.</li>
-                    <li><strong>Надежность:</strong> повысил точность снабжения производства до 90%.</li>
-                    <li><strong>ВЭД:</strong> стабилизировал цепочки поставок из ЕС и ЮВА в условиях кризиса 2022 года.</li>
+                    <li>Экономический эффект $4.9 млн за 2022 год за счет тендерных процедур.</li>
+                    <li>Точность снабжения производства повышена до 90%.</li>
+                    <li>Стабилизировал поставки из ЕС и ЮВА в условиях логистического кризиса.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header" onclick="toggleExp(this)">
+                <div><span class="company">Fashion Retail Group</span> | Руководитель ВЭД и закупок | 2016 – 2020</div>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="exp-content">
+                <ul>
+                    <li>Выстроил департамент ВЭД «с нуля»: Китай, Индия, Турция.</li>
+                    <li>Снизил логистические издержки на 15% за счет оптимизации маршрутов.</li>
+                    <li>Обеспечил запуск 4 новых коллекций в год без срывов сроков.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header" onclick="toggleExp(this)">
+                <div><span class="company">Industrial Supply</span> | Менеджер по снабжению | 2010 – 2016</div>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="exp-content">
+                <ul>
+                    <li>Управление базой из 200+ поставщиков сырья и материалов.</li>
+                    <li>Внедрил систему KPI для поставщиков, повысив надежность снабжения.</li>
+                    <li>Перевел процессы на электронное декларирование в таможне.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header" onclick="toggleExp(this)">
+                <div><span class="company">Ранний опыт</span> | Различные роли | 2003 – 2010</div>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="exp-content">
+                <ul>
+                    <li>Старт карьеры в международной логистике и ВЭД.</li>
+                    <li>Опыт работы в операционном сопровождении сделок и переговорах.</li>
                 </ul>
             </div>
         </div>
     </div>
 
     <div class="contacts">
-        <h2>Связаться со мной</h2>
+        <h2>Свяжитесь со мной</h2>
         <p>konstantin@prozoroff.com | +7 (965) 337-38-83</p>
-        <a href="https://t.me/constantin_p" class="btn-main">Связаться в Telegram</a>
+        <a href="https://t.me/constantin_p" class="btn-main">Написать в Telegram</a>
     </div>
 </div>
 
@@ -147,10 +182,6 @@
     function toggleExp(header) {
         const content = header.nextElementSibling;
         const isOpen = content.style.display === 'block';
-        
-        // Закрываем другие, если нужно (опционально)
-        // document.querySelectorAll('.exp-content').forEach(c => c.style.display = 'none');
-        
         content.style.display = isOpen ? 'none' : 'block';
         header.classList.toggle('active', !isOpen);
     }
