@@ -3,53 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Константин Прозоров | Operations • Supply Chain • Projects</title>
+    <title>Константин Прозоров | Резюме</title>
     <style>
         :root {
             --dark: #0f172a;
-            --accent: #2563eb;
-            --gray: #64748b;
-            --bg: #f8fafc;
+            --accent: #f59e0b;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f8fafc;
         }
-        body { font-family: 'Inter', -apple-system, sans-serif; margin: 0; background: var(--bg); color: var(--dark); line-height: 1.6; }
-        header { background: var(--dark); color: white; padding: 80px 20px; text-align: center; }
-        .container { max-width: 900px; margin: -40px auto 40px; padding: 0 20px; }
-        .card { background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        body { font-family: 'Inter', sans-serif; margin: 0; background: var(--bg); color: var(--text); line-height: 1.6; }
+        header { padding: 60px 20px; text-align: center; background: linear-gradient(to bottom, #0f172a, #1e293b); }
         
-        /* Стили опыта */
-        .exp-item { margin-bottom: 10px; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; }
-        .exp-header { 
-            background: white; padding: 15px 20px; cursor: pointer; 
-            display: flex; justify-content: space-between; align-items: center;
-            font-weight: 600; transition: background 0.2s;
+        .profile-img {
+            width: 150px; height: 150px; border-radius: 50%;
+            border: 4px solid var(--accent); object-fit: cover; margin-bottom: 20px;
         }
-        .exp-header:hover { background: #f1f5f9; }
-        .exp-content { display: none; padding: 20px; background: #fdfdfd; border-top: 1px solid #e2e8f0; }
-        .exp-content ul { margin: 0; padding-left: 20px; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .card { background: var(--card-bg); border-radius: 16px; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.3); margin-bottom: 30px; }
+        
+        h2 { border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px; margin-bottom: 25px; }
+
+        .exp-item { margin-bottom: 15px; border: 1px solid #334155; border-radius: 10px; overflow: hidden; }
+        .exp-header { 
+            background: #334155; padding: 15px 20px; cursor: pointer; 
+            display: flex; justify-content: space-between; align-items: center;
+            font-weight: 600; color: #fff;
+        }
+        .exp-content { display: none; padding: 20px; background: #1e293b; border-top: 1px solid #334155; }
+        .exp-content ul { margin: 0; padding-left: 20px; color: #cbd5e1; }
         .exp-content li { margin-bottom: 10px; }
-        .arrow { transition: transform 0.3s; color: var(--accent); }
+        
+        .arrow { color: var(--accent); transition: 0.3s; }
         .active .arrow { transform: rotate(180deg); }
 
-        /* Контакты */
-        .contacts { text-align: center; padding: 60px 20px; background: white; margin-top: 40px; }
+        .contacts { text-align: center; padding: 40px 20px; }
         .btn-main { 
-            display: inline-block; background: var(--accent); color: white; 
-            padding: 16px 32px; border-radius: 8px; text-decoration: none; 
-            font-weight: 600; transition: transform 0.2s;
+            display: inline-block; background: var(--accent); color: var(--dark); 
+            padding: 15px 35px; border-radius: 10px; text-decoration: none; 
+            font-weight: 700; transition: 0.3s;
         }
-        .btn-main:hover { transform: translateY(-2px); }
     </style>
 </head>
 <body>
 
 <header>
+    <img src="https://via.placeholder.com/150" alt="Константин Прозоров" class="profile-img">
     <h1>Константин Прозоров</h1>
     <p>Операционный директор | Директор по закупкам и ВЭД</p>
 </header>
 
 <div class="container">
     <div class="card">
-        <h2 style="text-align: center;">Подробный опыт</h2>
+        <h2>Подробный опыт</h2>
         
         <div class="exp-item">
             <div class="exp-header" onclick="toggleExp(this)">
@@ -86,7 +93,7 @@
             </div>
             <div class="exp-content">
                 <ul>
-                    <li>Экономический эффект $4.9 млн за 2022 год за счет тендеров и оптимизации FOB цен.</li>
+                    <li>Экономический эффект $4.9 млн за 2022 год за счет тендеров и оптимизации цен.</li>
                     <li>Точность снабжения производства повышена до 90%.</li>
                     <li>Стабилизировал поставки из ЕС и ЮВА в условиях логистического кризиса.</li>
                 </ul>
@@ -96,32 +103,17 @@
 </div>
 
 <div class="contacts">
-    <h2>Связаться со мной</h2>
-    <p style="font-size: 1.1em;">
-        <a href="tel:+79653373883" style="color: inherit; text-decoration: none;">+7 (965) 337-38-83</a> • 
-        <a href="mailto:konstantin@prozoroff.com" style="color: inherit; text-decoration: none;">konstantin@prozoroff.com</a>
-    </p>
-    <br>
+    <h2>Связаться</h2>
+    <p>+7 (965) 337-38-83 • konstantin@prozoroff.com</p>
     <a href="https://t.me/constantin_p" class="btn-main">Написать в Telegram</a>
 </div>
 
 <script>
     function toggleExp(header) {
         const content = header.nextElementSibling;
-        const allContents = document.querySelectorAll('.exp-content');
-        const allHeaders = document.querySelectorAll('.exp-header');
-        
-        const isAlreadyOpen = content.style.display === 'block';
-
-        // Закрываем всё
-        allContents.forEach(c => c.style.display = 'none');
-        allHeaders.forEach(h => h.classList.remove('active'));
-
-        // Если не было открыто — открываем
-        if (!isAlreadyOpen) {
-            content.style.display = 'block';
-            header.classList.add('active');
-        }
+        const isOpen = content.style.display === 'block';
+        content.style.display = isOpen ? 'none' : 'block';
+        header.classList.toggle('active', !isOpen);
     }
 </script>
 
