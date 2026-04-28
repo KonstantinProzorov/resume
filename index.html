@@ -198,8 +198,71 @@
         .pain-result strong {
             color: var(--teal);
         }
+        .nav-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 22px;
+        }
+        .nav-links a {
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95em;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(216, 243, 239, 0.72);
+        }
 
         .container { max-width: 960px; margin: 0 auto; padding: 40px 20px 72px; }
+        .trust-block {
+            display: grid;
+            grid-template-columns: 220px minmax(0, 1fr);
+            gap: 28px;
+            align-items: center;
+            margin-bottom: 44px;
+            padding: 24px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid var(--line);
+            box-shadow: 0 12px 32px rgba(22, 35, 43, 0.05);
+        }
+        .trust-photo {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 16px;
+            display: block;
+            box-shadow: 0 16px 34px rgba(22, 35, 43, 0.10);
+        }
+        .trust-copy h2 {
+            margin: 0 0 12px;
+            text-align: left;
+            font-size: 1.7em;
+        }
+        .trust-copy p {
+            margin: 0 0 12px;
+            color: var(--muted);
+        }
+        .trust-points {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+        }
+        .trust-point {
+            padding: 14px 16px;
+            border-radius: 12px;
+            background: rgba(246, 251, 250, 0.95);
+            border: 1px solid rgba(15, 118, 110, 0.12);
+            color: var(--muted);
+            font-size: 0.95em;
+        }
+        .trust-point strong {
+            display: block;
+            color: var(--teal);
+            margin-bottom: 4px;
+        }
 
         /* Ключевые плашки сверху */
         .roles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 44px; }
@@ -210,6 +273,85 @@
         }
         .role-card h3 { margin-top: 0; color: var(--teal); font-size: 1.2em; }
         .role-card p { font-size: 0.95em; color: var(--muted); margin-bottom: 0; }
+        .route-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 26px;
+        }
+        .route-card {
+            background: rgba(255, 255, 255, 0.86);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 22px;
+            box-shadow: 0 10px 30px rgba(22, 35, 43, 0.05);
+        }
+        .route-card h3 {
+            margin: 0 0 10px;
+            color: var(--teal);
+        }
+        .route-card p {
+            margin: 0;
+            color: var(--muted);
+        }
+        .offer-list {
+            display: grid;
+            gap: 14px;
+            margin-top: 22px;
+        }
+        .offer-item {
+            display: grid;
+            grid-template-columns: 34px minmax(0, 1fr);
+            gap: 14px;
+            align-items: flex-start;
+            padding: 18px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid var(--line);
+        }
+        .offer-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: #fff;
+            font-weight: 700;
+        }
+        .offer-item h3 {
+            margin: 0 0 6px;
+            color: var(--text);
+            font-size: 1.05em;
+        }
+        .offer-item p {
+            margin: 0;
+            color: var(--muted);
+        }
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 24px;
+        }
+        .proof-item {
+            padding: 18px;
+            border-radius: 12px;
+            background: rgba(216, 243, 239, 0.62);
+            border: 1px solid rgba(15, 118, 110, 0.13);
+        }
+        .proof-item strong {
+            display: block;
+            color: var(--teal);
+            font-size: 1.28em;
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+        .proof-item span {
+            color: var(--muted);
+            font-size: 0.94em;
+        }
 
         .section { margin: 56px 0; }
         .section h2 { font-size: 1.8em; margin-bottom: 18px; text-align: center; }
@@ -259,6 +401,18 @@
             border-color: transparent;
             margin-top: 20px;
         }
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 18px;
+        }
+        .contact-links a {
+            color: var(--teal);
+            font-weight: 700;
+            text-decoration: none;
+        }
         .contacts .btn-main:hover { background: var(--coral); box-shadow: 0 16px 34px rgba(249, 115, 96, 0.22); }
         @media (max-width: 640px) {
             header { padding-top: 20px; }
@@ -270,6 +424,10 @@
         }
         @media (max-width: 920px) {
             .hero-summary { grid-template-columns: 1fr; }
+            .trust-block { grid-template-columns: 1fr; }
+            .trust-photo { max-width: 260px; }
+            .trust-points { grid-template-columns: 1fr; }
+            .route-grid, .proof-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -281,11 +439,11 @@
             <div class="hero-copy">
                 <div class="eyebrow">Закупки | ВЭД | Логистика | Запасы</div>
                 <h1>Константин Прозоров</h1>
-                <p class="subtitle">Закупки, запасы и поставки вышли из-под контроля?</p>
+                <p class="subtitle">Если закупки, запасы и поставки уже влияют на деньги, сроки и продажи - это нужно переводить из ручного режима в систему.</p>
                 <p class="lead">Деньги заморожены в товаре. Неликвид растет. Нужные позиции внезапно уходят в out of stock. Бюджет закупок непрозрачен, а решения завязаны на ручное управление, Excel и отдельных людей.</p>
 
                 <div class="pain-card">
-                    <h2>За 2 недели можно быстро увидеть, где система дает сбой</h2>
+                    <h2>За 2 недели можно увидеть, где система дает сбой</h2>
                     <ul class="pain-list">
                         <li>где бизнес теряет деньги в закупках, остатках и сроках поставки;</li>
                         <li>какие позиции и поставщики создают кассовое давление и дефицит;</li>
@@ -294,7 +452,7 @@
                     <p class="pain-result"><strong>Результат:</strong> понятная диагностика, приоритеты действий и рабочий план, который можно запускать сразу, а не через месяцы обсуждений.</p>
                 </div>
 
-                <p class="lead">20 лет опыта в закупках, поставщиках, Китае, логистике, 1С/Excel-аналитике и управлении командами. Подключаюсь как full-time руководитель или project / part-time эксперт, когда бизнесу нужен не еще один исполнитель, а человек, который быстро возвращает управляемость.</p>
+                <p class="lead">Я подключаюсь как full-time руководитель или project / part-time эксперт, когда бизнесу нужен не еще один исполнитель, а человек, который быстро возвращает управляемость в закупках, ВЭД, логистике, запасах и отчетности.</p>
                 <div class="hero-summary">
                     <div class="summary-item">
                         <span class="summary-number">20 лет</span>
@@ -313,12 +471,57 @@
                     <a href="#fulltime" class="btn-main">Full-time директор</a>
                     <a href="#project" class="btn-secondary">Project / part-time эксперт</a>
                 </div>
+                <div class="nav-links">
+                    <a href="#who">Для кого</a>
+                    <a href="#formats">Форматы</a>
+                    <a href="#result">Что делаю</a>
+                    <a href="#experience">Опыт</a>
+                    <a href="#contacts">Контакты</a>
+                </div>
             </div>
         </div>
     </div>
 </header>
 
 <div class="container">
+    <section class="trust-block">
+        <img src="photo.jpg" alt="Константин Прозоров" class="trust-photo">
+        <div class="trust-copy">
+            <h2>Эксперт, который умеет наводить порядок в сложных закупках</h2>
+            <p>Я не продаю абстрактную “консультацию по оптимизации”. Моя зона работы - закупки, ВЭД, логистика, запасы, поставщики и управленческая отчетность там, где бизнес уже вырос, а система управления отстала.</p>
+            <p>Обычно меня зовут, когда нужно быстро понять, где теряются деньги, почему команда тушит пожары, почему товар то зависает, то внезапно заканчивается, и как вернуть контроль без бесконечных совещаний.</p>
+            <div class="trust-points">
+                <div class="trust-point">
+                    <strong>Управленческий уровень</strong>
+                    full-time роль или project / part-time подключение под конкретную задачу.
+                </div>
+                <div class="trust-point">
+                    <strong>Практика, а не теория</strong>
+                    Китай, поставщики, переговоры, планирование, запасы, 1С, Excel, AI-инструменты.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="who">
+        <h2>Кому можно отправить эту страницу</h2>
+        <p class="section-intro">Сайт сделан как короткая рабочая визитка: по нему понятно, в каких задачах я полезен, в каком формате могу подключиться и почему разговор стоит продолжить.</p>
+        <div class="route-grid">
+            <div class="route-card">
+                <h3>Собственнику или CEO</h3>
+                <p>Если закупки, склад и продажи живут в разных реальностях, деньги застревают в запасах, а управляемой картины по поставкам нет.</p>
+            </div>
+            <div class="route-card">
+                <h3>HR и рекрутеру</h3>
+                <p>Если нужен директор по закупкам, supply chain, ВЭД или закупкам и логистике с сильной операционной и финансовой частью.</p>
+            </div>
+            <div class="route-card">
+                <h3>Карьерному консультанту</h3>
+                <p>Чтобы быстро считать позиционирование: full-time руководитель плюс проектный эксперт для компаний, которым нужна управляемость.</p>
+            </div>
+        </div>
+    </section>
+
     <div class="roles-grid">
         <div class="role-card">
             <h3>Снижаю закупочную себестоимость</h3>
@@ -336,10 +539,10 @@
 
     <section class="section" id="formats">
         <h2>Форматы сотрудничества</h2>
-        <p class="section-intro">Уровень подхода остается управленческим: формат может быть штатным, проектным или консультационным.</p>
+        <p class="section-intro">Формат может быть штатным, проектным или консультационным. Уровень подхода остается управленческим: я смотрю на закупки как на систему денег, товара, сроков, поставщиков и ответственности.</p>
         <div class="two-col">
             <div class="panel" id="fulltime">
-                <h3>Full-time</h3>
+                <h3>Full-time директор</h3>
                 <p>Директор по закупкам, Supply Chain Director, директор по закупкам и логистике.</p>
                 <ul>
                     <li>Стратегия закупок, ВЭД, логистики и запасов.</li>
@@ -348,7 +551,7 @@
                 </ul>
             </div>
             <div class="panel" id="project">
-                <h3>Project / part-time</h3>
+                <h3>Project / part-time эксперт</h3>
                 <p>Проектное усиление закупок, снабжения, ВЭД, логистики и запасов.</p>
                 <ul>
                     <li>Аудит процессов, поставщиков, цен, сроков и остатков.</li>
@@ -359,6 +562,41 @@
         </div>
         <div class="note">
             <strong>Для проектного формата:</strong> при сохранении бюджета на штатную единицу специалиста компания получает в распоряжение эксперта с 20-летним опытом, который самостоятельно планирует нагрузку и отвечает за результат.
+        </div>
+    </section>
+
+    <section class="section" id="result">
+        <h2>Что можно получить быстро</h2>
+        <p class="section-intro">Я полезен там, где нужно не “закрыть вакансию”, а быстро вернуть управляемость: понять потери, навести порядок в данных и запустить действия, которые влияют на деньги и сроки.</p>
+        <div class="offer-list">
+            <div class="offer-item">
+                <span class="offer-number">1</span>
+                <div>
+                    <h3>Диагностика закупок, запасов и поставщиков</h3>
+                    <p>Где заморожены деньги, почему возникает неликвид, что уходит в дефицит, какие поставщики и категории создают основные риски.</p>
+                </div>
+            </div>
+            <div class="offer-item">
+                <span class="offer-number">2</span>
+                <div>
+                    <h3>План управленческих действий</h3>
+                    <p>Что остановить, что пересобрать, где изменить правила закупки, оплат, запасов, отчетности и ответственности команды.</p>
+                </div>
+            </div>
+            <div class="offer-item">
+                <span class="offer-number">3</span>
+                <div>
+                    <h3>Контур отчетности и контроля</h3>
+                    <p>Понятные показатели по запасам, срокам, оплатам, поставщикам, out of stock, неликвиду и план-факту закупок.</p>
+                </div>
+            </div>
+            <div class="offer-item">
+                <span class="offer-number">4</span>
+                <div>
+                    <h3>Практическое усиление команды</h3>
+                    <p>Переговоры, альтернативные поставщики, Китай, ВЭД, логистика, 1С, Excel, AI-инструменты и внедрение правил в ежедневную работу.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -382,7 +620,29 @@
         </div>
     </section>
 
-    <h2 class="section-title">Опыт работы</h2>
+    <section class="section">
+        <h2>Доказательства опытом</h2>
+        <div class="proof-grid">
+            <div class="proof-item">
+                <strong>$4.9 млн</strong>
+                <span>экономический эффект в закупках за счет цены FOB и переговоров.</span>
+            </div>
+            <div class="proof-item">
+                <strong>120 млн руб.</strong>
+                <span>экономия на тендерных закупках при бюджете 500 млн руб.</span>
+            </div>
+            <div class="proof-item">
+                <strong>80%</strong>
+                <span>снижение кассового разрыва через учет и планирование ДДС.</span>
+            </div>
+            <div class="proof-item">
+                <strong>2 мес. -> 1 нед.</strong>
+                <span>ускорение цикла планирования закупок и календаря оплат с AI-инструментами.</span>
+            </div>
+        </div>
+    </section>
+
+    <h2 class="section-title" id="experience">Опыт работы</h2>
 
     <div class="experience">
         <div class="exp-item">
@@ -465,10 +725,14 @@
         </div>
     </div>
 
-    <div class="contacts">
+    <div class="contacts" id="contacts">
         <h2>Обсудить задачу</h2>
-        <p>Full-time роль, проектное усиление закупок или аудит текущего процесса.</p>
+        <p>Full-time роль, проектное усиление закупок, аудит текущего процесса или точечная диагностика на 2 недели.</p>
         <p>konstantin@prozoroff.com | +7 (965) 337-38-83</p>
+        <div class="contact-links">
+            <a href="mailto:konstantin@prozoroff.com">konstantin@prozoroff.com</a>
+            <a href="tel:+79653373883">+7 965 337-38-83</a>
+        </div>
         <a href="https://t.me/constantin_p" class="btn-main">Написать в Telegram</a>
     </div>
 </div>
